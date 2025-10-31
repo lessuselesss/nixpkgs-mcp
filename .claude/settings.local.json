@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//home/lessuseless/.config/lul/modules/lessuseless/secrets/**)",
+      "Read(//home/lessuseless/.config/lul/modules/lessuseless/**)",
+      "Read(//home/lessuseless/.config/sops/**)",
+      "Read(//home/lessuseless/**)",
+      "Read(//run/user/1000/secrets.d/1/**)",
+      "Bash(cat:*)",
+      "Bash(sops -d:*)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(./fork-repo-w-cron-sync.sh:*)",
+      "Bash(gh repo clone:*)",
+      "Bash(git tag:*)",
+      "Bash(timeout 5 ./result/bin/nixpkgs-mcp-server:*)",
+      "Bash(./result/bin/nixpkgs-mcp-server -c \"import mcp; print(''MCP imported successfully'')\")",
+      "Bash(python3:*)",
+      "Bash(nix build:*)"
+    ],
+    "deny": [],
+    "ask": []
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "nixpkgs"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "nixpkgs": {
+      "command": "nix",
+      "args": ["run", "/home/lessuseless/Projects/nixpkgs-mcp"],
+      "env": {}
+    }
+  }
+}

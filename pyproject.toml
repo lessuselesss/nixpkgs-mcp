@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "nixpkgs-mcp-server"
+version = "0.1.0"
+description = "MCP server that dynamically exposes all nixpkgs packages as tools"
+authors = [{name = "nixpkgs-mcp"}]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+]
+
+[project.scripts]
+nixpkgs-mcp-server = "server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
